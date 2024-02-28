@@ -37,10 +37,13 @@ Where is the file called `about.Rmd`?
 
 ### Looking at the directory structure of my project
 
+At a terminal prompt, type:
+
 ```
-ls
+ls -R myproject
 ```
 
+after replacing "myproject" with the name of your new project.
 
 ```
 myproject/
