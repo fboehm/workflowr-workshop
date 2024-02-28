@@ -1,0 +1,160 @@
+---
+title: "Setting up a new project with `workflowr`"
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+
+- TODO
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Use R to install `workflowr` R package on your computer.    
+- Use `workflowr` functions in an R session to set up a new project.  
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+```r
+install.packages("workflowr")
+```
+
+
+
+```r
+library(workflowr)
+wflow_start("~/Desktop/try-workflow1")
+```
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### What is the directory structure of my new project? 
+
+Where is the file called `about.Rmd`? 
+
+:::::::::::::: solution
+
+### Looking at the directory structure of my project
+
+**At a terminal prompt**, type:
+
+```
+ls -R myproject
+```
+
+after replacing "myproject" with the name of your new project.
+
+**Within an R session**, type: 
+
+
+```r
+list.files(recursive = TRUE, no.. = TRUE)
+```
+
+when you're in the new project (root) directory. 
+
+
+```
+myproject/
+├── .gitignore
+├── .Rprofile
+├── _workflowr.yml
+├── analysis/
+│   ├── about.Rmd
+│   ├── index.Rmd
+│   ├── license.Rmd
+│   └── _site.yml
+├── code/
+│   ├── README.md
+├── data/
+│   └── README.md
+├── docs/
+├── myproject.Rproj
+├── output/
+│   └── README.md
+└── README.md
+```
+
+We see that `about.Rmd` is in the directory `myproject/analysis/`.
+
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+The two required subdirectories are analysis/ and docs/. These directories should never be removed from the workflowr project.
+
+analysis/: This directory contains all the source R Markdown files for implementing the data analyses for your project. It also contains a special R Markdown file, index.Rmd, that does not contain any R code, but will be used to generate index.html, the homepage for your website. In addition, this directory contains the important configuration file _site.yml, which you can use to edit the theme, navigation bar, and other website aesthetics (for more details see the documentation on R Markdown websites). Do not delete index.Rmd or _site.yml.
+
+
+docs/: This directory contains all the HTML files for your website. The HTML files are built from the R Markdown files in analysis/. Furthermore, any figures created by the R Markdown files are saved here. Each of these figures is saved according to the following pattern: docs/figure/<insert Rmd filename>/<insert chunk name>-#.png, where # corresponds to which of the plots the chunk generated (since one chunk can produce an arbitrary number of plots)3.
+
+
+The workflowr-specific configuration file is **_workflowr.yml**. It will apply the workflowr reproducibility checks consistently across all your R Markdown files. The most critical setting is knit_root_dir, which determines the directory where the files in analysis/ will be executed. The default is to execute the code in the root of the project where _workflowr.yml is located (i.e. "."). To instead execute the code from analysis/, change the setting to knit_root_dir: "analysis". See ?wflow_html for more details.
+
+*Also required is the RStudio project file*, in this example myproject.Rproj. **Even if you are not using RStudio, do not delete this file** because the workflowr functions rely on it to determine the root directory of the project.
+
+
+* `data/`: This directory is for raw data files.
+
+* `code/`: This directory is for code that might not be appropriate to include
+in R Markdown format (e.g. for pre-processing the data, or for long-running
+code).
+
+* `output/`: This directory is for processed data files and other
+outputs generated from the code and data. For example, scripts in
+`code/` that pre-process raw data files from `data/` should save the
+processed data files in `output/`.
+
+The `.Rprofile` file is a regular R script that is run once when the project is
+opened. It contains the call `library("workflowr")`, ensuring that workflowr is
+loaded automatically each time a workflowr-project is opened.
+
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### How do I create a new Rmd file for use in my data analysis?   
+
+Using either R or shell commands, create a new Rmd file called "exploratory-data-analysis.Rmd" and save it in your "analysis" subdirectory. 
+
+:::::::::::::: solution
+
+### Creating "exploratory-data-analysis.Rmd"
+
+**In Rstudio**: 
+- File menu > New File > Rmarkdown...   
+- Fill in prompts for document title, date, etc.   
+- File menu > Save as... > Navigate to "analysis" subdirectory, then click "Save".
+
+**With a text editor (like `vim`)**:
+
+- Create a new file by typing at the prompt: `vim analysis/exploratory-data-analysis.Rmd`; be sure to use the correct relative file path  
+- Insert needed yaml at top of the new text file.   
+- Save file. 
+
+
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+
