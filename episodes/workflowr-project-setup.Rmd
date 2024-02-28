@@ -13,7 +13,9 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- TODO
+- Use R to install `workflowr` R package on your computer.    
+- Use `workflowr` functions in an R session to set up a new project.  
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
