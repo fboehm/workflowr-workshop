@@ -38,6 +38,11 @@ Where is the file called `about.Rmd`?
 ### Looking at the directory structure of my project
 
 ```
+ls
+```
+
+
+```
 myproject/
 ├── .gitignore
 ├── .Rprofile
