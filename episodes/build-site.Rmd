@@ -1,5 +1,5 @@
 ---
-title: "Build website with `workflowr`"
+title: "Build & publish website with `workflowr` functions"
 teaching: 10
 exercises: 2
 ---
@@ -13,11 +13,69 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Use `workflowr` R functions to render Rmd files and build your website.  
-- 
+- Use `workflowr` R function `wflow_build` to render Rmd files and build your website.  
+- Use `workflowr` R function `wflow_publish` to 
+- Use `workflowr` R function `wflow_status` to 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+```{r, eval = FALSE}
+wflow_status()
+```
+
+
+```{r, eval = FALSE}
+# from within the 'root' directory of your new project
+wflow_build(".")
+```
+
+
+
+
+```{r, eval = FALSE}
+wflow_status()
+```
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### How does the output of `wflow_status` change after adding a new Rmd file to the "analysis" subdirectory? 
+
+
+First, look at the output of `wflow_status`. Run it again if you lost its output.  
+Then, create a new Rmd file called "preliminary-statistical-modeling.Rmd" and save it in your analysis subdirectory.  
+Run `wflow_status` again and compare the new output with the current output.
+
+
+
+
+
+
+
+:::::::::::::: solution
+
+### `wflow_status()` output before adding preliminary-statistical-modeling.Rmd:
+
+```
+
+```
+
+
+
+### `wflow_status()` after adding preliminary-statistical-modeling.Rmd to analysis subdirectory:
+
+```
+
+```
+
+
+
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
