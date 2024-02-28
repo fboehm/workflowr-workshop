@@ -1,5 +1,5 @@
 ---
-title: "Using RMarkdown"
+title: "Setting up a new project with `workflowr`"
 teaching: 10
 exercises: 2
 ---
@@ -100,6 +100,35 @@ The `.Rprofile` file is a regular R script that is run once when the project is
 opened. It contains the call `library("workflowr")`, ensuring that workflowr is
 loaded automatically each time a workflowr-project is opened.
 
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### How do I create a new Rmd file for use in my data analysis?   
+
+Using either R or shell commands, create a new Rmd file called "exploratory-data-analysis.Rmd" and save it in your "analysis" subdirectory. 
+
+:::::::::::::: solution
+
+### Creating "exploratory-data-analysis.Rmd"
+
+**In Rstudio**: 
+- File menu > New File > Rmarkdown...   
+- Fill in prompts for document title, date, etc.   
+- File menu > Save as... > Navigate to "analysis" subdirectory, then click "Save".
+
+**With a text editor (like `vim`)**:
+
+- Create a new file by typing at the prompt: `vim analysis/exploratory-data-analysis.Rmd`; be sure to use the correct relative file path  
+- Insert needed yaml at top of the new text file.   
+- Save file. 
+
+
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
