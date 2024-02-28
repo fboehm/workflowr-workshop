@@ -19,3 +19,51 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### What is the directory structure of my new project? 
+
+Where is the file called `about.Rmd`? 
+
+:::::::::::::: solution
+
+### Looking at the directory structure of my project
+
+```
+myproject/
+├── .gitignore
+├── .Rprofile
+├── _workflowr.yml
+├── analysis/
+│   ├── about.Rmd
+│   ├── index.Rmd
+│   ├── license.Rmd
+│   └── _site.yml
+├── code/
+│   ├── README.md
+├── data/
+│   └── README.md
+├── docs/
+├── myproject.Rproj
+├── output/
+│   └── README.md
+└── README.md
+```
+
+
+
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
