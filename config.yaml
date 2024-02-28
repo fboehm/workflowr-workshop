@@ -11,7 +11,7 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'Reproducible data analysis with R packages' # FIXME
+title: 'Reproducible data analysis with R packages and `workflowr`' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: 2024-02-28 # FIXME
@@ -33,7 +33,7 @@ source: 'https://github.com/fboehm/workflowr-workshop' # FIXME
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'fboehm@protonmail.com' # FIXME
+contact: 'frederick.boehm@gmail.com' # FIXME
 
 # Navigation ------------------------------------------------
 #
@@ -44,7 +44,7 @@ contact: 'fboehm@protonmail.com' # FIXME
 # Example -------------
 #
 # episodes:
- - workflowr-project-setup.Rmd
+#- workflowr-project-setup.Rmd
 # - first-steps.md
 #
 # learners:
@@ -59,7 +59,11 @@ contact: 'fboehm@protonmail.com' # FIXME
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
+- introduction.Rmd  
+- workflowr-project-setup.Rmd  
+- build-site.Rmd  
+- publish-website.Rmd  
+- exploratory-data-analysis.Rmd  
 
 # Information for Learners
 learners: 
