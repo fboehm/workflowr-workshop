@@ -1,1 +1,24 @@
+---
+title: "Build website with `workflowr`"
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+
+- TODO
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Use `workflowr` R functions to render Rmd files and build your website.  
+- 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
 
