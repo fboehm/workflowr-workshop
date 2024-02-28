@@ -16,6 +16,12 @@
     <loc>https://fboehm.github.io/workflowr-workshop/aio.html</loc>
   </url>
   <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/build-site.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/exploratory-data-analysis.html</loc>
+  </url>
+  <url>
     <loc>https://fboehm.github.io/workflowr-workshop/images.html</loc>
   </url>
   <url>
@@ -35,6 +41,12 @@
   </url>
   <url>
     <loc>https://fboehm.github.io/workflowr-workshop/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/instructor/build-site.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/instructor/exploratory-data-analysis.html</loc>
   </url>
   <url>
     <loc>https://fboehm.github.io/workflowr-workshop/instructor/images.html</loc>
@@ -58,7 +70,13 @@
     <loc>https://fboehm.github.io/workflowr-workshop/instructor/profiles.html</loc>
   </url>
   <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/instructor/publish-website.html</loc>
+  </url>
+  <url>
     <loc>https://fboehm.github.io/workflowr-workshop/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/instructor/workflowr-project-setup.html</loc>
   </url>
   <url>
     <loc>https://fboehm.github.io/workflowr-workshop/instructor-notes.html</loc>
@@ -76,6 +94,12 @@
     <loc>https://fboehm.github.io/workflowr-workshop/profiles.html</loc>
   </url>
   <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/publish-website.html</loc>
+  </url>
+  <url>
     <loc>https://fboehm.github.io/workflowr-workshop/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://fboehm.github.io/workflowr-workshop/workflowr-project-setup.html</loc>
   </url>
 </urlset>

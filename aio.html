@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Reproducible data analysis with R packages: All in One View</title>
+<title>Reproducible data analysis with R packages and `workflowr`: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -65,7 +65,7 @@
       <img class="small-logo" alt="Carpentries Incubator" src="assets/images/incubator-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Reproducible data analysis with R packages
+      Reproducible data analysis with R packages and `workflowr`
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -76,7 +76,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Reproducible data analysis with R packages
+            Reproducible data analysis with R packages and `workflowr`
           </span>
         </li>
         <li class="nav-item">
@@ -108,7 +108,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Reproducible data analysis with R packages
+  Reproducible data analysis with R packages and `workflowr`
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -190,6 +190,54 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="workflowr-project-setup.html">2. Setting up a new project with <code>workflowr</code></a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="build-site.html">3. Build &amp; publish website with <code>workflowr</code> functions</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="publish-website.html">4. Publish your project with <code>workflowr</code></a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="exploratory-data-analysis.html">5. Exploratory data analysis for Palmer penguins data with Rmd</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -246,7 +294,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Using RMarkdown</a></p>
 <hr>
-<p>Last updated on 2024-02-27 |
+<p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -431,7 +479,685 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section>
+</section></section><section id="aio-workflowr-project-setup"><p>Content from <a href="workflowr-project-setup.html">Setting up a new project with workflowr</a></p>
+<hr>
+<p>Last updated on 2024-02-28 |
+        
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/workflowr-project-setup.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use R to install <code>workflowr</code> R package on your
+computer.<br>
+</li>
+<li>Use <code>workflowr</code> functions in an R session to set up a new
+project.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"workflowr"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">workflowr</span><span class="op">)</span></span>
+<span><span class="fu">wflow_start</span><span class="op">(</span><span class="st">"~/Desktop/try-workflow1"</span><span class="op">)</span></span></code></pre>
+</div>
+<div id="what-is-the-directory-structure-of-my-new-project" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="what-is-the-directory-structure-of-my-new-project" class="callout-inner">
+<h3 class="callout-title">What is the directory structure of my new
+project?<a class="anchor" aria-label="anchor" href="#what-is-the-directory-structure-of-my-new-project"></a>
+</h3>
+<div class="callout-content">
+<p>Where is the file called <code>about.Rmd</code>?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Looking at the directory structure of my project</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p><strong>At a terminal prompt</strong>, type:</p>
+<pre><code>ls -R myproject</code></pre>
+<p>after replacing “myproject” with the name of your new project.</p>
+<p><strong>Within an R session</strong>, type:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">list.files</span><span class="op">(</span>recursive <span class="op">=</span> <span class="cn">TRUE</span>, no.. <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
+</div>
+<p>when you’re in the new project (root) directory.</p>
+<pre><code>myproject/
+├── .gitignore
+├── .Rprofile
+├── _workflowr.yml
+├── analysis/
+│   ├── about.Rmd
+│   ├── index.Rmd
+│   ├── license.Rmd
+│   └── _site.yml
+├── code/
+│   ├── README.md
+├── data/
+│   └── README.md
+├── docs/
+├── myproject.Rproj
+├── output/
+│   └── README.md
+└── README.md</code></pre>
+<p>We see that <code>about.Rmd</code> is in the directory
+<code>myproject/analysis/</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>The two required subdirectories are analysis/ and docs/. These
+directories should never be removed from the workflowr project.</p>
+<p>analysis/: This directory contains all the source R Markdown files
+for implementing the data analyses for your project. It also contains a
+special R Markdown file, index.Rmd, that does not contain any R code,
+but will be used to generate index.html, the homepage for your website.
+In addition, this directory contains the important configuration file
+_site.yml, which you can use to edit the theme, navigation bar, and
+other website aesthetics (for more details see the documentation on R
+Markdown websites). Do not delete index.Rmd or _site.yml.</p>
+<p>docs/: This directory contains all the HTML files for your website.
+The HTML files are built from the R Markdown files in analysis/.
+Furthermore, any figures created by the R Markdown files are saved here.
+Each of these figures is saved according to the following pattern:
+docs/figure/<insert rmd filename>/<insert chunk name>-#.png, where #
+corresponds to which of the plots the chunk generated (since one chunk
+can produce an arbitrary number of plots)3.</insert></insert></p>
+<p>The workflowr-specific configuration file is **_workflowr.yml**. It
+will apply the workflowr reproducibility checks consistently across all
+your R Markdown files. The most critical setting is knit_root_dir, which
+determines the directory where the files in analysis/ will be executed.
+The default is to execute the code in the root of the project where
+_workflowr.yml is located (i.e. “.”). To instead execute the code from
+analysis/, change the setting to knit_root_dir: “analysis”. See
+?wflow_html for more details.</p>
+<p><em>Also required is the RStudio project file</em>, in this example
+myproject.Rproj. <strong>Even if you are not using RStudio, do not
+delete this file</strong> because the workflowr functions rely on it to
+determine the root directory of the project.</p>
+<ul>
+<li><p><code>data/</code>: This directory is for raw data
+files.</p></li>
+<li><p><code>code/</code>: This directory is for code that might not be
+appropriate to include in R Markdown format (e.g. for pre-processing the
+data, or for long-running code).</p></li>
+<li><p><code>output/</code>: This directory is for processed data files
+and other outputs generated from the code and data. For example, scripts
+in <code>code/</code> that pre-process raw data files from
+<code>data/</code> should save the processed data files in
+<code>output/</code>.</p></li>
+</ul>
+<p>The <code>.Rprofile</code> file is a regular R script that is run
+once when the project is opened. It contains the call
+<code><a href="https://github.com/workflowr/workflowr" class="external-link">library("workflowr")</a></code>, ensuring that workflowr is loaded
+automatically each time a workflowr-project is opened.</p>
+<div id="how-do-i-create-a-new-rmd-file-for-use-in-my-data-analysis" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="how-do-i-create-a-new-rmd-file-for-use-in-my-data-analysis" class="callout-inner">
+<h3 class="callout-title">How do I create a new Rmd file for use in my
+data analysis?<a class="anchor" aria-label="anchor" href="#how-do-i-create-a-new-rmd-file-for-use-in-my-data-analysis"></a>
+</h3>
+<div class="callout-content">
+<p>Using either R or shell commands, create a new Rmd file called
+“exploratory-data-analysis.Rmd” and save it in your “analysis”
+subdirectory.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">Creating “exploratory-data-analysis.Rmd”</h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p><strong>In Rstudio</strong>: - File menu &gt; New File &gt;
+Rmarkdown…<br>
+- Fill in prompts for document title, date, etc.<br>
+- File menu &gt; Save as… &gt; Navigate to “analysis” subdirectory, then
+click “Save”.</p>
+<p><strong>With a text editor (like <code>vim</code>)</strong>:</p>
+<ul>
+<li>Create a new file by typing at the prompt:
+<code>vim analysis/exploratory-data-analysis.Rmd</code>; be sure to use
+the correct relative file path<br>
+</li>
+<li>Insert needed yaml at top of the new text file.<br>
+</li>
+<li>Save file.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section id="aio-build-site"><p>Content from <a href="build-site.html">Build &amp; publish website with workflowr functions</a></p>
+<hr>
+<p>Last updated on 2024-02-28 |
+        
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/build-site.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use <code>workflowr</code> R function <code>wflow_build</code> to
+render Rmd files and build your website.<br>
+</li>
+<li>Use <code>workflowr</code> R function <code>wflow_publish</code>
+to</li>
+<li>Use <code>workflowr</code> R function <code>wflow_status</code>
+to</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">wflow_status</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># from within the 'root' directory of your new project</span></span>
+<span><span class="fu">wflow_build</span><span class="op">(</span><span class="st">"."</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">wflow_status</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+<div id="how-does-the-output-of-wflow_status-change-after-adding-a-new-rmd-file-to-the-analysis-subdirectory" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="how-does-the-output-of-wflow_status-change-after-adding-a-new-rmd-file-to-the-analysis-subdirectory" class="callout-inner">
+<h3 class="callout-title">How does the output of<code>wflow_status</code>change after adding a new Rmd file to the
+“analysis” subdirectory?<a class="anchor" aria-label="anchor" href="#how-does-the-output-of-wflow_status-change-after-adding-a-new-rmd-file-to-the-analysis-subdirectory"></a>
+</h3>
+<div class="callout-content">
+<p>First, look at the output of <code>wflow_status</code>. Run it again
+if you lost its output.<br>
+Then, create a new Rmd file called
+“preliminary-statistical-modeling.Rmd” and save it in your analysis
+subdirectory.<br>
+Run <code>wflow_status</code> again and compare the new output with the
+current output.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">wflow_status() output before adding preliminary-statistical-modeling.Rmd:</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<pre><code>Status of 3 Rmd files
+
+Totals:
+ 3 Unpublished
+
+The following Rmd files require attention:
+
+Unp analysis/about.Rmd
+Unp analysis/index.Rmd
+Unp analysis/license.Rmd
+
+Key: Unp = Unpublished
+
+The current Git status is: working directory clean
+
+To publish your changes as part of your website, use `wflow_publish()`.
+To commit your changes without publishing them yet, use
+`wflow_git_commit()`.</code></pre>
+<div class="section level3">
+<h3 id="wflow_status-after-adding-preliminary-statistical-modeling-rmd-to-analysis-subdirectory">
+<code>wflow_status()</code> after adding
+preliminary-statistical-modeling.Rmd to analysis subdirectory:<a class="anchor" aria-label="anchor" href="#wflow_status-after-adding-preliminary-statistical-modeling-rmd-to-analysis-subdirectory"></a>
+</h3>
+<pre><code>Status of 3 Rmd files
+
+Totals:
+ 3 Unpublished
+
+The following Rmd files require attention:
+
+Unp analysis/about.Rmd
+Unp analysis/index.Rmd
+Unp analysis/license.Rmd
+
+Key: Unp = Unpublished
+
+The current Git status is: working directory clean
+
+To publish your changes as part of your website, use `wflow_publish()`.
+To commit your changes without publishing them yet, use
+`wflow_git_commit()`.
+&gt; wflow_status()
+Status of 4 Rmd files
+
+Totals:
+ 3 Unpublished
+ 1 Scratch
+
+The following Rmd files require attention:
+
+Unp analysis/about.Rmd
+Unp analysis/index.Rmd
+Unp analysis/license.Rmd
+Scr analysis/preliminary-statistical-modeling.Rmd
+
+Key: Unp = Unpublished, Scr = Scratch (Untracked)
+
+The current Git status is:
+
+    status substatus                                          file
+ untracked untracked analysis/preliminary-statistical-modeling.Rmd
+
+To publish your changes as part of your website, use `wflow_publish()`.
+To commit your changes without publishing them yet, use
+`wflow_git_commit()`.</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section id="aio-publish-website"><p>Content from <a href="publish-website.html">Publish your project with workflowr</a></p>
+<hr>
+<p>Last updated on 2024-02-28 |
+        
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/publish-website.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use <code>workflowr</code> function <code>wflow_publish()</code> to
+publish your website.<br>
+</li>
+<li>List the three steps involved in executing a call to
+<code>wflow_publish</code> function<br>
+</li>
+<li>Recognize that “publishing” your website synchronizes html files
+(ie, those outputted from rendering Rmd files) and the source Rmd files.
+By itself, it doesn’t post your site to the internet.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">wflow_publish</span><span class="op">(</span>files <span class="op">=</span> <span class="st">"analysis/*Rmd"</span>, <span class="co"># publish all files ending with 'Rmd' in the analysis subdir</span></span>
+<span>    message <span class="op">=</span> <span class="st">"publish initial files"</span> </span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+<div id="what-do-the-two-arguments-files-and-message-do-and-mean-in-the-function-wflow_publish" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="what-do-the-two-arguments-files-and-message-do-and-mean-in-the-function-wflow_publish" class="callout-inner">
+<h3 class="callout-title">What do the two arguments,<code>files</code>and<code>message</code>do and mean in the function<code>wflow_publish</code>?<a class="anchor" aria-label="anchor" href="#what-do-the-two-arguments-files-and-message-do-and-mean-in-the-function-wflow_publish"></a>
+</h3>
+<div class="callout-content">
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">wflow_publish</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">wflow_status</span><span class="op">(</span><span class="st">"."</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Understanding wflow_publish arguments</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">wflow_publish</span></span></code></pre>
+</div>
+<p>Looking at the help file for the function <code>wflow_publish</code>,
+we see:</p>
+<pre><code><span><span class="va">Usage</span><span class="op">:</span></span>
+<span></span>
+<span>     <span class="fu">wflow_publish</span><span class="op">(</span></span>
+<span>       files <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>       message <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>       all <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       force <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       update <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       republish <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       combine <span class="op">=</span> <span class="st">"or"</span>,</span>
+<span>       view <span class="op">=</span> <span class="fu">getOption</span><span class="op">(</span><span class="st">"workflowr.view"</span><span class="op">)</span>,</span>
+<span>       delete_cache <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       seed <span class="op">=</span> <span class="fl">12345</span>,</span>
+<span>       verbose <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       dry_run <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>       project <span class="op">=</span> <span class="st">"."</span></span>
+<span>     <span class="op">)</span></span></code></pre>
+<p>and</p>
+<pre><code>Arguments:
+
+   files: character (default: NULL). R Markdown files and other files
+          to be added and committed with Git (step 1). Any R Markdown
+          files will also be built (step 2) and their output HTML and
+          figures will be subsequently committed (step 3). Supports
+          file globbing. The files are always built in the order they
+          are listed.
+
+ message: character (default: NULL). A commit message.</code></pre>
+</div>
+</div>
+</div>
+</div></section><section id="aio-exploratory-data-analysis"><p>Content from <a href="exploratory-data-analysis.html">Exploratory data analysis for Palmer penguins data with Rmd</a></p>
+<hr>
+<p>Last updated on 2024-02-28 |
+        
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/exploratory-data-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Use <code>workflowr</code> function <code>wflow_publish()</code> to
+publish your website.<br>
+</li>
+<li>List the three steps involved in executing a call to
+<code>wflow_publish</code> function<br>
+</li>
+<li>Recognize that “publishing” your website synchronizes html files
+(ie, those outputted from rendering Rmd files) and the source Rmd files.
+By itself, it doesn’t post your site to the internet.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figure><img src="https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png" style="width:50.0%" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"palmerpenguins"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">palmerpenguins</span><span class="op">)</span></span>
+<span><span class="fu">data</span><span class="op">(</span>package <span class="op">=</span> <span class="st">'palmerpenguins'</span><span class="op">)</span></span>
+<span><span class="fu">head</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">str</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
+ $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
+ $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
+ $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install tidyverse R package</span></span>
+<span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">species</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 3 × 2
+  species       n
+  &lt;fct&gt;     &lt;int&gt;
+1 Adelie      152
+2 Chinstrap    68
+3 Gentoo      124</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">species</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">summarize</span><span class="op">(</span><span class="fu">across</span><span class="op">(</span><span class="fu">where</span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="va">mean</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning: There was 1 warning in `summarize()`.
+ℹ In argument: `across(where(is.numeric), mean, na.rm = TRUE)`.
+ℹ In group 1: `species = Adelie`.
+Caused by warning:
+! The `...` argument of `across()` is deprecated as of dplyr 1.1.0.
+Supply arguments directly to `.fns` through an anonymous function instead.
+
+  # Previously
+  across(a:b, mean, na.rm = TRUE)
+
+  # Now
+  across(a:b, \(x) mean(x, na.rm = TRUE))</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 3 × 6
+  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year
+  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+1 Adelie              38.8          18.3              190.       3701. 2008.
+2 Chinstrap           48.8          18.4              196.       3733. 2008.
+3 Gentoo              47.5          15.0              217.       5076. 2008.</code></pre>
+</div>
+<section id="penguin-mass-vs.-flipper-length"><h2 class="section-heading">Penguin mass vs. flipper length<a class="anchor" aria-label="anchor" href="#penguin-mass-vs.-flipper-length"></a>
+</h2>
+<hr class="half-width">
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mass_flipper</span> <span class="op">&lt;-</span> <span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">penguins</span>, </span>
+<span>                       <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>,</span>
+<span>                           y <span class="op">=</span> <span class="va">body_mass_g</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>color <span class="op">=</span> <span class="va">species</span>, </span>
+<span>                 shape <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,</span>
+<span>             size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>             alpha <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_color_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Penguin size, Palmer Station LTER"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="st">"Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Body mass (g)"</span>,</span>
+<span>       color <span class="op">=</span> <span class="st">"Penguin species"</span>,</span>
+<span>       shape <span class="op">=</span> <span class="st">"Penguin species"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">0.2</span>, <span class="fl">0.7</span><span class="op">)</span>,</span>
+<span>        plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
+<span>        plot.caption <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0</span>, face<span class="op">=</span> <span class="st">"italic"</span><span class="op">)</span>,</span>
+<span>        plot.caption.position <span class="op">=</span> <span class="st">"plot"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2
+3.5.0.
+ℹ Please use the `legend.position.inside` argument of `theme()` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mass_flipper</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<figure><img src="fig/exploratory-data-analysis-rendered-mass-flipper-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ --></section></section>
 </div>
     </main>
 </div>
@@ -449,7 +1175,7 @@ any links that you are not going to use.
 	
         | <a href="https://github.com/fboehm/workflowr-workshop/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/fboehm/workflowr-workshop/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/fboehm/workflowr-workshop/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:fboehm@protonmail.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+				<p><a href="https://github.com/fboehm/workflowr-workshop/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:frederick.boehm@gmail.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
         
