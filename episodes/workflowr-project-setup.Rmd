@@ -20,8 +20,15 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+```{r, install-pkg, eval = FALSE}
+install.packages("workflowr")
+```
 
 
+```{r, eval= FALSE}
+library(workflowr)
+wflow_start("~/Desktop/try-workflow1")
+```
 
 
 
@@ -37,13 +44,22 @@ Where is the file called `about.Rmd`?
 
 ### Looking at the directory structure of my project
 
-At a terminal prompt, type:
+**At a terminal prompt**, type:
 
 ```
 ls -R myproject
 ```
 
 after replacing "myproject" with the name of your new project.
+
+**Within an R session**, type: 
+
+```{r, eval = FALSE}
+list.files(recursive = TRUE, no.. = TRUE)
+```
+
+when you're in the new project (root) directory. 
+
 
 ```
 myproject/
