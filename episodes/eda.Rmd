@@ -20,7 +20,7 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-![](https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png){width=50%}
+![](lter_penguins.png){width=75%}
 
 
 
