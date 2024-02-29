@@ -25,6 +25,11 @@ exercises: 2
 - `wflow_publish` to synchronize outputted htmls and source Rmds  
 
 
+```r
+wflow_publish(files = "analysis/*.Rmd",
+    message = "feat: rendered all Rmds to htmls for website" # fred likes informative git commit messages... but also try to not write too much
+)
+```
 
 
 
