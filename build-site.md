@@ -31,7 +31,16 @@ wflow_status()
 wflow_build()
 ```
 
+## Download a Rmd file
 
+
+```r
+download.file(url = "https://github.com/fboehm/sharing/blob/main/initial-analysis.Rmd", 
+  destfile = "analysis/initial-analysis.Rmd"
+)
+```
+
+## Check status again
 
 
 
