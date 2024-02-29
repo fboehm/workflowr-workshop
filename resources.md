@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do I learn more?  
+- How do I learn more about `workflowr` and reproducible research?  
 - How do I contact the instructor after the workshop?   
 
 
@@ -46,8 +46,12 @@ https://fboehm.us/
 ![](screenshot.png)
 
 
+## More on reproducible research (with and without R)
 
-
+- [The Carpentries](https://carpentries.org/index.html)    
+- [Karl Broman's reproducible research tools class materials](https://kbroman.org/Tools4RR/)    
+- [CRAN Task View for Reproducible Research](https://cran.r-project.org/web/views/ReproducibleResearch.html)    
+- [Scholarly literature on reproducible research](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C23&q=reproducible+research&btnG=)  
 
 
 
