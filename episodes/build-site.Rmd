@@ -7,15 +7,15 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 
-- TODO
+- How do I start a new data analysis project with `workflowr`? 
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Use `workflowr` R function `wflow_build` to render Rmd files and build your website.  
-- Use `workflowr` R function `wflow_publish` to 
-- Use `workflowr` R function `wflow_status` to 
+- Use `workflowr` R function `wflow_status` to check status of your newly built (local, not on the internet) website.   
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
