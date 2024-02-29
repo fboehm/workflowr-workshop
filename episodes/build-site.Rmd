@@ -7,8 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 
-- How do I start a new data analysis project with `workflowr`? 
-
+- How do I assemble my Rmd files (*which contain my R code for the analysis*) into a website with results?   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
