@@ -193,7 +193,9 @@
         
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#penguin-mass-vs.-flipper-length">Penguin mass vs. flipper length</a></li>
+        <ul><li><a href="#create-a-new-rmd-file-in-the-analysis-subdirectory-eda.rmd">Create a new Rmd file in the analysis subdirectory, “eda.Rmd”</a></li>
+<li><a href="#add-r-code-for-analyzing-palmer-penguins-data">Add R code for analyzing Palmer Penguins data</a></li>
+<li><a href="#penguin-mass-vs.-flipper-length">Penguin mass vs. flipper length</a></li>
 <li><a href="#update-website-by-rendering-newest-rmd-file-to-html-and-rebuilding-website">Update website (by rendering newest Rmd file to html and rebuilding
 website)</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -309,7 +311,22 @@ html files)</li>
 </div>
 </div>
 </div>
-<figure><img src="../lter_penguins.png" style="width:75.0%" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb1">
+<section id="create-a-new-rmd-file-in-the-analysis-subdirectory-eda.rmd"><h2 class="section-heading">Create a new Rmd file in the analysis subdirectory, “eda.Rmd”<a class="anchor" aria-label="anchor" href="#create-a-new-rmd-file-in-the-analysis-subdirectory-eda.rmd"></a>
+</h2>
+<hr class="half-width"><p><strong>In Rstudio</strong>: - File menu &gt; New File &gt;
+Rmarkdown…<br>
+- Fill in prompts for document title, date, etc.<br>
+- File menu &gt; Save as… &gt; Navigate to “analysis” subdirectory, then
+click “Save”.</p>
+<p><strong>With a text editor (like <code>vim</code>)</strong>:</p>
+<ul><li>Create a new file by typing at the prompt:
+<code>vim analysis/exploratory-data-analysis.Rmd</code>; be sure to use
+the correct relative file path<br></li>
+<li>Insert needed yaml at top of the new text file.<br></li>
+<li>Save file.</li>
+</ul></section><section id="add-r-code-for-analyzing-palmer-penguins-data"><h2 class="section-heading">Add R code for analyzing Palmer Penguins data<a class="anchor" aria-label="anchor" href="#add-r-code-for-analyzing-palmer-penguins-data"></a>
+</h2>
+<hr class="half-width"><figure><img src="../lter_penguins.png" style="width:75.0%" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -414,7 +431,7 @@ Supply arguments directly to `.fns` through an anonymous function instead.
 2 Chinstrap           48.8          18.4              196.       3733. 2008.
 3 Gentoo              47.5          15.0              217.       5076. 2008.</code></pre>
 </div>
-<section id="penguin-mass-vs.-flipper-length"><h2 class="section-heading">Penguin mass vs. flipper length<a class="anchor" aria-label="anchor" href="#penguin-mass-vs.-flipper-length"></a>
+</section><section id="penguin-mass-vs.-flipper-length"><h2 class="section-heading">Penguin mass vs. flipper length<a class="anchor" aria-label="anchor" href="#penguin-mass-vs.-flipper-length"></a>
 </h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
