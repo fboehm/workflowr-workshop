@@ -1,6 +1,23 @@
+---
+title: "Using `wflow_publish` to 'publish' locally your website"
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
 
 
+- How do I add a new Rmd file (*with additional R analysis code*) and add its outputted html to my website?   
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+
+- Create a new Rmd file with exploratory data analysis code, including plots  
+- Use `workflowr` functions to render the entire collection of Rmds (including the new Rmd) into a single website (with multiple html files)  
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ![](https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png){width=50%}
@@ -13,13 +30,9 @@ install.packages("palmerpenguins")
 
 ```{r}
 library(palmerpenguins)
-data(package = 'palmerpenguins')
 head(penguins)
 ```
 
-```{r}
-str(penguins)
-```
 
 ```{r, eval = FALSE}
 # install tidyverse R package
@@ -63,22 +76,12 @@ mass_flipper
 ```
 
 
-:::::::::::::::::::::::::::::::::::::: challenge
+## Update website (by rendering newest Rmd file to html and rebuilding website)  
 
-### How do I plot 
-
-:::::::::::::: solution
-
-### Understanding `wflow_publish` arguments
-
-
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
+```{r, eval = FALSE}
+wflow_publish(files = "analysis/*.Rmd",
+    message = "feat: added new exploratory data analyis section to my analysis"
+)
+```
 
 
