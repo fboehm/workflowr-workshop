@@ -621,7 +621,21 @@ website.</li>
 <code class="sourceCode R"><span><span class="co"># from within the 'root' directory of your new project</span></span>
 <span><span class="fu">wflow_build</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
+<section id="download-a-rmd-file"><h2 class="section-heading">Download a Rmd file<a class="anchor" aria-label="anchor" href="#download-a-rmd-file"></a>
+</h2>
+<hr class="half-width">
 <div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span>url <span class="op">=</span> <span class="st">"https://github.com/fboehm/sharing/blob/main/initial-analysis.Rmd"</span>, </span>
+<span>  destfile <span class="op">=</span> <span class="st">"analysis/initial-analysis.Rmd"</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+</section><section id="check-status-again"><h2 class="section-heading">Check status again<a class="anchor" aria-label="anchor" href="#check-status-again"></a>
+</h2>
+<hr class="half-width">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -722,7 +736,12 @@ To commit your changes without publishing them yet, use
 </div>
 </div>
 </div>
-</div></section><section id="aio-publish"><p>Content from <a href="publish.html">Using wflow_publish to 'publish' locally your website</a></p>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-publish"><p>Content from <a href="publish.html">Using wflow_publish to 'publish' locally your website</a></p>
 <hr>
 <p>Last updated on 2024-02-29 |
         
@@ -807,7 +826,7 @@ Rmds</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Understanding wflow_publish arguments</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>

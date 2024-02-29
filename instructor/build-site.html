@@ -165,12 +165,20 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         3. Build &amp; publish website with <code>workflowr</code> functions
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#download-a-rmd-file">Download a Rmd file</a></li>
+<li><a href="#check-status-again">Check status again</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -313,7 +321,19 @@ website.</li>
 <code class="sourceCode R"><span><span class="co"># from within the 'root' directory of your new project</span></span>
 <span><span class="fu">wflow_build</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb3">
+<section id="download-a-rmd-file"><h2 class="section-heading">Download a Rmd file<a class="anchor" aria-label="anchor" href="#download-a-rmd-file"></a>
+</h2>
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">download.file</span><span class="op">(</span>url <span class="op">=</span> <span class="st">"https://github.com/fboehm/sharing/blob/main/initial-analysis.Rmd"</span>, </span>
+<span>  destfile <span class="op">=</span> <span class="st">"analysis/initial-analysis.Rmd"</span></span>
+<span><span class="op">)</span></span></code></pre>
+</div>
+</section><section id="check-status-again"><h2 class="section-heading">Check status again<a class="anchor" aria-label="anchor" href="#check-status-again"></a>
+</h2>
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -418,10 +438,7 @@ To commit your changes without publishing them yet, use
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/workflowr-project-setup.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/publish.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
