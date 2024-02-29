@@ -22,7 +22,7 @@ exercises: 2
 
 ## Fred Boehm
 
-![]()
+![](IMG_2351.jpg)
 
 Homepage: https://fboehm.us/   
 Github: https://github.com/fboehm/  
