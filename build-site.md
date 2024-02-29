@@ -28,7 +28,7 @@ wflow_status()
 
 ```r
 # from within the 'root' directory of your new project
-wflow_build(".")
+wflow_build()
 ```
 
 
