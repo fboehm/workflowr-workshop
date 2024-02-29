@@ -217,7 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="publish-website.html">4. Publish your project with <code>workflowr</code></a>
+        <a href="publish.html">4. Using <code>wflow_publish</code> to 'publish' locally your website</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -229,7 +229,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="exploratory-data-analysis.html">5. Exploratory data analysis for Palmer penguins data with Rmd</a>
+        <a href="eda.html">5. Using <code>wflow_publish</code> to 'publish' locally your website</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -646,7 +646,7 @@ current output.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">wflow_status() output before adding preliminary-statistical-modeling.Rmd:</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <pre><code>Status of 3 Rmd files
 
@@ -717,11 +717,11 @@ To commit your changes without publishing them yet, use
 </div>
 </div>
 </div>
-</div></section><section id="aio-publish-website"><p>Content from <a href="publish-website.html">Publish your project with workflowr</a></p>
+</div></section><section id="aio-publish"><p>Content from <a href="publish.html">Using wflow_publish to 'publish' locally your website</a></p>
 <hr>
 <p>Last updated on 2024-02-29 |
         
-        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/publish-website.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/publish.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -733,7 +733,8 @@ To commit your changes without publishing them yet, use
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>TODO</li>
+<li>How do I synchronize outputted htmls and source Rmds for my whole
+website?</li>
 </ul>
 </div>
 </div>
@@ -746,9 +747,6 @@ To commit your changes without publishing them yet, use
 <li>Use <code>workflowr</code> function <code>wflow_publish()</code> to
 publish your website.<br>
 </li>
-<li>List the three steps involved in executing a call to
-<code>wflow_publish</code> function<br>
-</li>
 <li>Recognize that “publishing” your website synchronizes html files
 (ie, those outputted from rendering Rmd files) and the source Rmd files.
 By itself, it doesn’t post your site to the internet.</li>
@@ -758,12 +756,21 @@ By itself, it doesn’t post your site to the internet.</li>
 </div>
 </div>
 </div>
+<section id="workflowr-publishing-analysis-website"><h2 class="section-heading">
+<code>workflowr</code> &amp; “publishing” analysis website<a class="anchor" aria-label="anchor" href="#workflowr-publishing-analysis-website"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>
+<code>wflow_publish</code> to synchronize outputted htmls and source
+Rmds</li>
+</ul>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">wflow_publish</span><span class="op">(</span>files <span class="op">=</span> <span class="st">"analysis/*Rmd"</span>, <span class="co"># publish all files ending with 'Rmd' in the analysis subdir</span></span>
-<span>    message <span class="op">=</span> <span class="st">"publish initial files"</span> </span>
+<code class="sourceCode R"><span><span class="fu">wflow_publish</span><span class="op">(</span>files <span class="op">=</span> <span class="st">"analysis/*.Rmd"</span>,</span>
+<span>    message <span class="op">=</span> <span class="st">"feat: rendered all Rmds to htmls for website"</span> <span class="co"># fred likes informative git commit messages... but also try to not write too much</span></span>
 <span><span class="op">)</span></span></code></pre>
 </div>
 <div id="what-do-the-two-arguments-files-and-message-do-and-mean-in-the-function-wflow_publish" class="callout challenge">
@@ -835,11 +842,16 @@ we see:</p>
 </div>
 </div>
 </div>
-</div></section><section id="aio-exploratory-data-analysis"><p>Content from <a href="exploratory-data-analysis.html">Exploratory data analysis for Palmer penguins data with Rmd</a></p>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-eda"><p>Content from <a href="eda.html">Using wflow_publish to 'publish' locally your website</a></p>
 <hr>
 <p>Last updated on 2024-02-29 |
         
-        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/exploratory-data-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/fboehm/workflowr-workshop/edit/main/episodes/eda.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -851,8 +863,8 @@ we see:</p>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do I add a new Rmd file for additional analyses and incorporate
-it into my website?</li>
+<li>How do I add a new Rmd file (<em>with additional R analysis
+code</em>) and add its outputted html to my website?</li>
 </ul>
 </div>
 </div>
@@ -862,50 +874,29 @@ it into my website?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Use <code>workflowr</code> function <code>wflow_publish()</code> to
-publish your website.<br>
+<li>Create a new Rmd file with exploratory data analysis code, including
+plots<br>
 </li>
-<li>Add exploratory data analysis R code (and outputs like figures) to
-your analysis<br>
-</li>
-<li>Recognize that “publishing” your website synchronizes html files
-(ie, those outputted from rendering Rmd files) and the source Rmd files.
-By itself, it doesn’t post your site to the internet.</li>
+<li>Use <code>workflowr</code> functions to render the entire collection
+of Rmds (including the new Rmd) into a single website (with multiple
+html files)</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section id="workflowr-publishing-analysis-website"><h2 class="section-heading">
-<code>workflowr</code> &amp; “publishing” analysis website<a class="anchor" aria-label="anchor" href="#workflowr-publishing-analysis-website"></a>
-</h2>
-<hr class="half-width">
-<ul>
-<li>
-<code>wflow_publish</code> to synchronize outputted htmls and source
-Rmds</li>
-</ul>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">wflow_publish</span><span class="op">(</span>files <span class="op">=</span> <span class="st">"analysis/*.Rmd"</span>,</span>
-<span>    message <span class="op">=</span> <span class="st">"feat: rendered all Rmds to htmls for website"</span> <span class="co"># fred likes informative git commit messages... but also try to not write too much</span></span>
-<span><span class="op">)</span></span></code></pre>
-</div>
-<figure><img src="https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png" style="width:50.0%" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb2">
+<figure><img src="https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png" style="width:50.0%" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"palmerpenguins"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">palmerpenguins</span><span class="op">)</span></span>
-<span><span class="fu">data</span><span class="op">(</span>package <span class="op">=</span> <span class="st">'palmerpenguins'</span><span class="op">)</span></span>
 <span><span class="fu">head</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -922,33 +913,14 @@ Rmds</li>
 6 Adelie  Torgersen           39.3          20.6               190        3650
 # ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">str</span><span class="op">(</span><span class="va">penguins</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
- $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
- $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
- $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
- $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
- $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
- $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
- $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
- $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install tidyverse R package</span></span>
 <span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -968,7 +940,7 @@ Rmds</li>
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -985,7 +957,7 @@ Rmds</li>
 2 Chinstrap    68
 3 Gentoo      124</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1019,10 +991,10 @@ Supply arguments directly to `.fns` through an anonymous function instead.
 2 Chinstrap           48.8          18.4              196.       3733. 2008.
 3 Gentoo              47.5          15.0              217.       5076. 2008.</code></pre>
 </div>
-</section><section id="penguin-mass-vs.-flipper-length"><h2 class="section-heading">Penguin mass vs. flipper length<a class="anchor" aria-label="anchor" href="#penguin-mass-vs.-flipper-length"></a>
+<section id="penguin-mass-vs.-flipper-length"><h2 class="section-heading">Penguin mass vs. flipper length<a class="anchor" aria-label="anchor" href="#penguin-mass-vs.-flipper-length"></a>
 </h2>
 <hr class="half-width">
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1055,7 +1027,7 @@ This warning is displayed once every 8 hours.
 Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
 generated.</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1067,29 +1039,17 @@ generated.</code></pre>
 <pre class="warning" tabindex="0"><code>Warning: Removed 2 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
-<figure><img src="fig/exploratory-data-analysis-rendered-mass-flipper-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="how-do-i-plot" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="how-do-i-plot" class="callout-inner">
-<h3 class="callout-title">How do I plot<a class="anchor" aria-label="anchor" href="#how-do-i-plot"></a>
+<figure><img src="fig/eda-rendered-mass-flipper-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section id="update-website-by-rendering-newest-rmd-file-to-html-and-rebuilding-website"><h2 class="section-heading">Update website (by rendering newest Rmd file to html and rebuilding
+website)<a class="anchor" aria-label="anchor" href="#update-website-by-rendering-newest-rmd-file-to-html-and-rebuilding-website"></a>
+</h2>
+<hr class="half-width">
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">Understanding wflow_publish arguments</h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-
-</div>
-</div>
-</div>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">wflow_publish</span><span class="op">(</span>files <span class="op">=</span> <span class="st">"analysis/*.Rmd"</span>,</span>
+<span>    message <span class="op">=</span> <span class="st">"feat: added new exploratory data analyis section to my analysis"</span></span>
+<span><span class="op">)</span></span></code></pre>
 </div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
