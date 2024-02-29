@@ -20,6 +20,23 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+## Create a new Rmd file in the analysis subdirectory, "eda.Rmd"
+
+**In Rstudio**: 
+- File menu > New File > Rmarkdown...   
+- Fill in prompts for document title, date, etc.   
+- File menu > Save as... > Navigate to "analysis" subdirectory, then click "Save".
+
+**With a text editor (like `vim`)**:
+
+- Create a new file by typing at the prompt: `vim analysis/exploratory-data-analysis.Rmd`; be sure to use the correct relative file path  
+- Insert needed yaml at top of the new text file.   
+- Save file. 
+
+
+## Add R code for analyzing Palmer Penguins data  
+
+
 ![](lter_penguins.png){width=75%}
 
 
