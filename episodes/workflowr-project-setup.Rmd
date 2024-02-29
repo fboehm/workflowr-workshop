@@ -7,7 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 
-- TODO
+- How do I get started with a *new* data analysis project with `workflowr`?   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
