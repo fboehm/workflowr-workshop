@@ -96,12 +96,13 @@ To commit your changes without publishing them yet, use
 Status of 3 Rmd files
 
 Totals:
- 3 Unpublished
+ 4 Unpublished
 
 The following Rmd files require attention:
 
 Unp analysis/about.Rmd
 Unp analysis/index.Rmd
+Unp analysis/initial-analysis.Rmd
 Unp analysis/license.Rmd
 
 Key: Unp = Unpublished
@@ -112,16 +113,17 @@ To publish your changes as part of your website, use `wflow_publish()`.
 To commit your changes without publishing them yet, use
 `wflow_git_commit()`.
 > wflow_status()
-Status of 4 Rmd files
+Status of 5 Rmd files
 
 Totals:
- 3 Unpublished
+ 4 Unpublished
  1 Scratch
 
 The following Rmd files require attention:
 
 Unp analysis/about.Rmd
 Unp analysis/index.Rmd
+Unp analysis/initial-analysis.Rmd
 Unp analysis/license.Rmd
 Scr analysis/preliminary-statistical-modeling.Rmd
 
