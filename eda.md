@@ -1,5 +1,5 @@
 ---
-title: "Using `wflow_publish` to 'publish' locally your website"
+title: "Adding a new data analysis file to your website"
 teaching: 10
 exercises: 2
 ---
