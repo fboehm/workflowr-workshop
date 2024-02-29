@@ -41,7 +41,7 @@ wflow_publish(files = "analysis/*.Rmd",
 
 
 ```r
-wflow_status(".")
+wflow_status()
 ```
 
 
