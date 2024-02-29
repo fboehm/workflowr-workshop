@@ -1,5 +1,5 @@
 ---
-title: "Exploratory data analysis for Palmer penguins data with Rmd"
+title: "Using `wflow_publish` to 'publish' locally your website"
 teaching: 10
 exercises: 2
 ---
@@ -7,34 +7,17 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 
-- How do I add a new Rmd file for additional analyses and incorporate it into my website?  
+- How do I add a new Rmd file (*with additional R analysis code*) and add its outputted html to my website?   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Use `workflowr` function `wflow_publish()` to publish your website.  
-- Add exploratory data analysis R code (and outputs like figures) to your analysis  
-- Recognize that "publishing" your website synchronizes html files (ie, those outputted from rendering Rmd files) and the source Rmd files. By itself, it doesn't post your site to the internet.       
 
+- Create a new Rmd file with exploratory data analysis code, including plots  
+- Use `workflowr` functions to render the entire collection of Rmds (including the new Rmd) into a single website (with multiple html files)  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-## `workflowr` & "publishing" analysis website  
-
-- `wflow_publish` to synchronize outputted htmls and source Rmds  
-
-
-```r
-wflow_publish(files = "analysis/*.Rmd",
-    message = "feat: rendered all Rmds to htmls for website" # fred likes informative git commit messages... but also try to not write too much
-)
-```
-
-
-
-
-
 
 
 ![](https://github.com/allisonhorst/palmerpenguins/blob/c19a904462482430170bfe2c718775ddb7dbb885/man/figures/lter_penguins.png){width=50%}
@@ -49,7 +32,6 @@ install.packages("palmerpenguins")
 
 ```r
 library(palmerpenguins)
-data(package = 'palmerpenguins')
 head(penguins)
 ```
 
@@ -66,22 +48,6 @@ head(penguins)
 # ℹ 2 more variables: sex <fct>, year <int>
 ```
 
-
-```r
-str(penguins)
-```
-
-```{.output}
-tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
- $ species          : Factor w/ 3 levels "Adelie","Chinstrap",..: 1 1 1 1 1 1 1 1 1 1 ...
- $ island           : Factor w/ 3 levels "Biscoe","Dream",..: 3 3 3 3 3 3 3 3 3 3 ...
- $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
- $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
- $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
- $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
- $ sex              : Factor w/ 2 levels "female","male": 2 1 1 NA 1 2 1 2 NA NA ...
- $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...
-```
 
 
 ```r
@@ -195,24 +161,16 @@ Warning: Removed 2 rows containing missing values or values outside the scale ra
 (`geom_point()`).
 ```
 
-<img src="fig/exploratory-data-analysis-rendered-mass-flipper-1.png" style="display: block; margin: auto;" />
+<img src="fig/eda-rendered-mass-flipper-1.png" style="display: block; margin: auto;" />
 
 
-:::::::::::::::::::::::::::::::::::::: challenge
-
-### How do I plot 
-
-:::::::::::::: solution
-
-### Understanding `wflow_publish` arguments
+## Update website (by rendering newest Rmd file to html and rebuilding website)  
 
 
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
+```r
+wflow_publish(files = "analysis/*.Rmd",
+    message = "feat: added new exploratory data analyis section to my analysis"
+)
+```
 
 

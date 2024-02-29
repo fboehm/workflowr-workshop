@@ -1,5 +1,5 @@
 ---
-title: "Publish your project with `workflowr`"
+title: "Using `wflow_publish` to 'publish' locally your website"
 teaching: 10
 exercises: 2
 ---
@@ -7,27 +7,28 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 
-- TODO
+- How do I synchronize outputted htmls and source Rmds for my whole website?  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Use `workflowr` function `wflow_publish()` to publish your website.  
-- List the three steps involved in executing a call to `wflow_publish` function  
 - Recognize that "publishing" your website synchronizes html files (ie, those outputted from rendering Rmd files) and the source Rmd files. By itself, it doesn't post your site to the internet.       
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## `workflowr` & "publishing" analysis website  
+
+- `wflow_publish` to synchronize outputted htmls and source Rmds  
 
 
 ```r
-wflow_publish(files = "analysis/*Rmd", # publish all files ending with 'Rmd' in the analysis subdir
-    message = "publish initial files" 
+wflow_publish(files = "analysis/*.Rmd",
+    message = "feat: rendered all Rmds to htmls for website" # fred likes informative git commit messages... but also try to not write too much
 )
 ```
-
 
 :::::::::::::::::::::::::::::::::::::: challenge
 
@@ -96,6 +97,7 @@ Arguments:
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 

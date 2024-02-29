@@ -62,8 +62,8 @@ episodes:
 - introduction.Rmd  
 - workflowr-project-setup.Rmd  
 - build-site.Rmd  
-- publish-website.Rmd  
-- exploratory-data-analysis.Rmd   
+- publish.Rmd  
+- eda.Rmd   
 - resources.Rmd  
 
 # Information for Learners
